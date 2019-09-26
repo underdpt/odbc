@@ -1,11 +1,11 @@
 {
-    "name": "tck/odbc",
+    "name": "alexrubl/odbc",
     "description": "ODBC Connector for Laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": "tck",
-            "email": "ben@thecreativekind.co.uk"
+            "name": "alexrubl",
+            "email": "alexrubl@mail.ru"
         }
     ],
     "require": {
