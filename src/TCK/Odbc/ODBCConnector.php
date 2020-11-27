@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Connectors\Connector;
 use Illuminate\Database\Connectors\ConnectorInterface;
+use Illuminate\Support\Arr;
 
 class ODBCConnector extends Connector implements ConnectorInterface {
 
@@ -18,7 +19,7 @@ class ODBCConnector extends Connector implements ConnectorInterface {
 	{
 		$options = $this->getOptions( $config );
 
-		$dsn = array_get( $config, 'dsn' );
+		$dsn = Arr::get( $config, 'dsn' );
 
 		return $this->createConnection( $dsn, $config, $options );
 	}
