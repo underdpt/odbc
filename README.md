@@ -5,7 +5,7 @@ This is a simple ODBC connector for Laravel 4/5.
 ### Installation
 Add this to the require section in your composer.json file
 ```
-"tck/odbc": "dev-master"
+"alexrubl/odbc": "8.0"
 ```
 
 In your config/app.php file add the Service Provider to the service providers array like so...
