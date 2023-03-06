@@ -7,7 +7,7 @@ class ODBCConnection extends Connection {
 	/**
 	 * Get the default query grammar instance.
 	 *
-	 * @return Illuminate\Database\Query\Grammars\Grammars\Grammar
+	 * @return \Illuminate\Database\Grammar
 	 */
 	protected function getDefaultQueryGrammar()
 	{
@@ -18,12 +18,11 @@ class ODBCConnection extends Connection {
 	/**
 	 * Get the default schema grammar instance.
 	 *
-	 * @return Illuminate\Database\Schema\Grammars\Grammar
+	 * @return \Illuminate\Database\Grammar
 	 */
 	protected function getDefaultSchemaGrammar()
 	{
 		$class = config('database.connections.odbc.grammar.schema') ?: '\TCK\Odbc\ODBCSchemaGrammar';
 		return $this->withTablePrefix( new $class );
 	}
-
 }

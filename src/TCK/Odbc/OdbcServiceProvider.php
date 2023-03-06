@@ -1,4 +1,6 @@
-<?php namespace TCK\Odbc;
+<?php
+
+namespace TCK\Odbc;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -54,5 +56,4 @@ class OdbcServiceProvider extends ServiceProvider {
 
 		} );
 	}
-
 }

@@ -1,4 +1,6 @@
-<?php namespace TCK\Odbc;
+<?php
+
+namespace TCK\Odbc;
 
 use Illuminate\Support\Fluent;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,14 +20,12 @@ class ODBCSchemaGrammar extends Grammar {
 	 *
 	 * @var array
 	 */
-	protected $modifiers = array( 'Unsigned', 'Nullable', 'Default', 'Increment' );
+	protected $modifiers = ['Unsigned', 'Nullable', 'Default', 'Increment'];
 
 	/**
 	 * Compile the query to determine if a table exists.
-	 *
-	 * @return string
 	 */
-	public function compileTableExists()
+	public function compileTableExists(): string
 	{
 		return 'select * from information_schema.tables where table_schema = ? and table_name = ?';
 	}
