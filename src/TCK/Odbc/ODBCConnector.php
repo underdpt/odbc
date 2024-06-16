@@ -11,12 +11,8 @@ class ODBCConnector extends Connector implements ConnectorInterface {
 
 	/**
 	 * Establish a database connection.
-	 *
-	 * @param array $config
-	 * @return \Doctrine\DBAL\Driver\PDOConnection|PDO
-	 * @internal param array $options
 	 */
-	public function connect(array$config)
+	public function connect(array $config): PDO
 	{
 		$options = $this->getOptions($config);
 
